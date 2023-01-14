@@ -1,0 +1,73 @@
+{
+    "name": "voucher",
+    "version": "1.0.2",
+    "private": true,
+    "scripts": {
+        "serve": "npm run serve-dev",
+        "serve-dev": "cross-env RUN_TYPE=serve vue-cli-service serve --mode dev",
+        "serve-test": "cross-env RUN_TYPE=serve vue-cli-service serve --mode test",
+        "serve-test.ip": "cross-env RUN_TYPE=serve vue-cli-service serve --mode test.ip",
+        "serve-gray": "cross-env RUN_TYPE=serve vue-cli-service serve --mode production.gray",
+        "serve-prod": "cross-env RUN_TYPE=serve vue-cli-service serve --mode production",
+        "serve-prod.ip": "cross-env RUN_TYPE=serve vue-cli-service serve --mode production.ip",
+        "build-dev": "cross-env RUN_TYPE=build vue-cli-service build --mode dev",
+        "build-test": "cross-env RUN_TYPE=build vue-cli-service build --mode test",
+        "build-test.ip": "cross-env RUN_TYPE=build vue-cli-service build --mode test.ip",
+        "build-gray": "cross-env RUN_TYPE=build vue-cli-service build --mode production.gray",
+        "build-prod": "cross-env RUN_TYPE=build vue-cli-service build --mode production --report",
+        "build-prod.ip": "cross-env RUN_TYPE=build vue-cli-service build --mode production.ip --report",
+        "lint": "vue-cli-service lint",
+        "updateims": "yarn upgrade ims-cdn --latest ims-tool --latest ims-mobile-components --latest"
+    },
+    "dependencies": {
+        "axios": "^1.2.2",
+        "babel-polyfill": "^6.26.0",
+        "core-js": "^3.6.5",
+        "jsencrypt": "^3.2.1",
+        "vant": "2.12.38",
+        "vue": "^2.6.14",
+        "vue-navigation": "^1.1.4",
+        "vue-router": "^3.5.1",
+        "weixin-js-sdk": "^1.6.0"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "~4.5.0",
+        "@vue/cli-plugin-eslint": "~4.5.0",
+        "@vue/cli-service": "~4.5.0",
+        "babel-eslint": "^10.1.0",
+        "babel-plugin-component": "^1.1.1",
+        "babel-plugin-import": "^1.13.3",
+        "cross-env": "^7.0.3",
+        "es6-promise": "^4.2.8",
+        "eslint": "^6.7.2",
+        "eslint-plugin-vue": "^6.2.2",
+        "less": "^4.1.2",
+        "less-loader": "7.3.0",
+        "path": "^0.12.7",
+        "sass": "^1.19.0",
+        "sass-loader": "^8.0.0",
+        "vconsole": "^3.5.1",
+        "vue-template-compiler": "^2.6.14",
+        "webpack": "^4.46.0"
+    },
+    "eslintConfig": {
+        "root": true,
+        "env": {
+            "node": true
+        },
+        "extends": [
+            "plugin:vue/essential",
+            "eslint:recommended"
+        ],
+        "parserOptions": {
+            "parser": "babel-eslint"
+        },
+        "rules": {}
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead"
+    ],
+    "code": 200
+}

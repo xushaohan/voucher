@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+      // 指定使用的模块  值为“es3”、“es5”、“es6”、“es2015”、“es2016”、“es2017”、“es2018”、“es2019”、“es2020”、“esnext”
+      "target": "ES6", 
+      // 允许从没有默认导出的模块中默认导入。这不会影响代码发出，只是类型检查
+      "allowSyntheticDefaultImports": true, 
+      // 用于解析非相关模块名称的基本目录。
+      "baseUrl": "./",
+      // 指定相对于 baseUrl 选项计算的路径映射。
+      "paths": {
+          "@/*": ["src/*"],
+          "components/*":["src/components/*"],
+          "views/*":["src/views/*"],
+          "api/*":["src/api/*"],
+          "utils/*":["src/utils/*"],
+          "eps/*":["src/views/business/EPS/*"]
+      }
+    },
+    "exclude": ["node_modules", "dist"] // 除了这两个目录以外,其他的目录都可以使用上述的设置
+}

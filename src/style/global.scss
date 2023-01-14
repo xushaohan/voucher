@@ -1,0 +1,185 @@
+// 页面容器 长宽满屏 边距归零
+html, body, #app {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  // background-color: #eee;
+}
+
+/* css rest */
+a{text-decoration: underline;}
+body,dd,dl,dt,h1,h2,h3,h4,li,ol,p,ul{margin:0;padding:0}
+body{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;-khtml-user-select:none;user-select:none;-webkit-touch-callout: none;}
+body{font-family:'Microsoft YaHei',Arial}
+body,div,fieldset,form,h1,h2,h3,h4,h5,h6,html,p{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%}
+body{height:100%;background-color: var(--color-background); font-size: var(--font-size); color: var(--color-black);}
+ul{list-style:none}
+input,textarea,button{border:0;-webkit-appearance:none;outline: none;}
+div{-webkit-touch-callout:none}
+button{padding: 0;margin: 0;}
+select{
+  -webkit-appearance:auto;
+  border: 1px solid rgb(204,204,204);
+  font-size:12px;
+  width:90%;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
+  background-color: #ffffff;
+}
+.matType .ims-card-item-content{
+  text-align: center;
+  width: 50px;
+  background-color: yellow;
+}
+.ims-table tbody td{
+  height: 35px;
+}
+.van-tag--primary.van-tag--plain{
+  height: 25px;
+}
+.van-button--disabled{
+  background-color: #615d5d;
+}
+
+.el-table--mini .el-table__cell{
+  padding: 0 0;
+}
+.el-table th.el-table__cell>.cell{
+padding: 0;
+font-weight: normal;
+}
+
+.highLigh{
+  color: var(--color-highLigh);
+}
+
+.bold{
+    font-weight: bold;
+}
+.blueText{
+  color: var(--color-primary);
+}
+.redText{
+    color: var(--color-highLigh);
+}
+.grayText{
+    color: var(--color-gray);
+}
+.subTitle{
+    font-weight: bold;
+    font-size: var(--font-size);
+}
+.shrink0{
+    flex-shrink: 0;
+}
+.van-nav-bar {
+  background-color: var(--color-primary);
+  &:after{
+    border-bottom-width: 0px;
+  }
+  .van-nav-bar__content{
+    .van-nav-bar__title{
+      font-weight: bold;
+      color: var(--color-white);
+    }
+    .van-nav-bar__right{
+      .van-nav-bar__text{
+        color: var(--color-white);
+      }
+    }
+    .van-nav-bar__left{
+      .van-nav-bar__arrow,.van-nav-bar__text{
+        color: var(--color-white);
+      }
+    }
+  }
+}
+.van-tabbar {
+  box-shadow: 0px -1px 20px -5px #c1c1c1
+}
+.itemWrap{background: #fff;}
+
+.flex{
+    display: flex;
+}
+.flex1{
+    flex: 1;
+}
+.hide{
+    display: none;
+}
+.overflowAuto{
+    overflow: auto;
+}
+.alignCenter{
+    align-items: center;
+}
+.label{
+    color: var(--color-gray);
+    margin-right: 5px;
+}
+.padding10{
+    padding: 10px;
+}
+.checkboxLabel{
+    color: var(--color-gray);
+    margin-right: 5px;
+    line-height: 35px;
+    flex-shrink: 0;
+}
+.box{
+    background-color: white;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+}
+.workingStyles .el-table .cell{
+    padding: 3px 0 !important;
+}
+//设置el-table斑马行背景色
+.el-table--striped .el-table__body tr.el-table__row--striped td.el-table__cell{
+    background-color: var(--color-stripe);
+}
+//设置el-table斑马行背景色
+.el-table .el-table__body tr.striped td.el-table__cell{
+    background-color: var(--color-stripe);
+}
+.el-table{
+    color: var(--color-black);
+    thead{
+        color: var(--color-black);
+    }
+    .cell{
+        padding: 0 0 !important;
+    }
+    //去除el-table分割线
+    td.el-table__cell, .el-table th.el-table__cell.is-leaf{
+        border-bottom: 0;
+    }
+    //设置表头背景色、去除底线
+    .el-table__header tr .el-table__cell{
+        background-color: var(--color-stripe);
+        border-bottom: 0;
+    }
+    .el-table__body{
+        font-size: var(--font-size);
+    }
+    .el-table__body tr.current-row>td.el-table__cell{
+        background-color: var(--color-checked) !important;
+    }
+    .el-table__body tr.selected-row>td.el-table__cell{
+        background-color: var(--color-checked) !important;
+    }
+    //去除表格hover效果
+    .el-table__body tr:hover>td.el-table__cell{
+        background-color: unset;
+    }
+}
+
+/* 去掉table 最底部的线 */
+.el-table--border::after,
+.el-table--group::after,
+.el-table::before {
+    background-color: transparent;
+}

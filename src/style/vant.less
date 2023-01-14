@@ -1,0 +1,31 @@
+@blue: #3874F6;
+.van-button{
+    border-radius: 6px;
+}
+.van-button--plain{
+    border: 1px solid #DCDFE6;
+}
+.van-button--plain.van-button--info{
+    color: var(--color-black);
+}
+.van-button--small{
+    height: 28px;
+}
+.van-dialog{
+    left: 5%;
+    transform: translate3d(0, -50%, 0);
+    width: 90%; border-radius: 5px;box-sizing: border-box;
+    font-size: var(--font-size);
+    .van-dialog__content{max-height: 80vh; display: flex; flex-direction: column;}
+    .van-dialog__header{padding: 5px; background-color: var(--color-primary); color: white;}
+    .van-dialog__footer .van-button {height: 35px;}
+    .van-dialog__footer .van-dialog__confirm{color: var(--color-primary); }
+}
+.van-toast{
+    min-width: 300px;
+    min-height: 100px;
+    font-size: 20px
+  }
+  .van-tab{
+      font-size: var(--font-size);
+  }
