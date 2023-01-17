@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const { rootPath, title, moduleKey } = require('./src/settings.js');
 
@@ -53,7 +54,13 @@ module.exports = {
             new webpack.DefinePlugin({
                 'process.env.RUN_TYPE': JSON.stringify(process.env.RUN_TYPE),
                 'process.env.VUE_APP_MODULE_KEY': moduleKey
-            })
+            }),
+            new CopyWebpackPlugin([
+                {
+                    from: path.resolve(__dirname, 'package.json'),
+                    to: 'package.json'
+                }
+            ])
         ],
         name: showTitle,
         output: isServer

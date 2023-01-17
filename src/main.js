@@ -25,7 +25,7 @@ new VConsole();
 const packageInfo = require('../package.json');
 import { getPackageJson } from '@/api/commApi';
 getPackageJson().then(res => {
-    console.log('版本号：' + res.version);
+    console.log('服务器版本号：' + res.version, '当前版本号：' + packageInfo.version);
     if (res.version != packageInfo.version) {
         Dialog.confirm({
             message: '当前版本与服务器版本不一致，请刷新页面获取最新版本'

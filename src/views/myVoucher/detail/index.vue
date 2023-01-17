@@ -39,7 +39,7 @@ export default {
             width: 150,
             height: 150
         });
-        this.qrCode.makeCode('ascsa4t34');
+        this.qrCode.makeCode('https://test.mobile.ims.yzscloud.cn:9700/produceHelper/voucherDetail');
 
         getPackageJson().then(res => {
             console.log('版本号：' + res.version);
