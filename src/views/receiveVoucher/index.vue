@@ -35,11 +35,11 @@ export default {
 
     methods: {
         onReceiveClick() {
-            this.$router.push('myVoucher').catch(() => {});
+            this.$router.push('myVoucher');
         },
         onDialogCloseClick() {
             this.showDialog = false;
-            this.$router.push('myVoucher').catch(() => {});
+            this.$router.push('myVoucher');
         }
     }
 };

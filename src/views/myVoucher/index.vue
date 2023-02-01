@@ -39,7 +39,7 @@ export default {
     },
 
     mounted() {
-        this.$showLoading();
+        // this.$showLoading();
         wxSDK
             .getLocation()
             .then(res => {
@@ -52,7 +52,7 @@ export default {
     methods: {
         onChange(index) {
             console.log('onChange', index);
-            this.$router.push('voucherDetail').catch(err => {});
+            this.$router.push('voucherDetail');
         }
     }
 };

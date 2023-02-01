@@ -6,6 +6,12 @@ import list from './routes/moduleRouter';
 const { rootPath } = require('@/settings.js');
 Vue.use(Router);
 
+const originalPush = Router.prototype.push;
+Router.prototype.push = function push(location, onResolve, onReject) {
+    if (onResolve || onReject) return originalPush.call(this, location, onResolve, onReject);
+    return originalPush.call(this, location).catch(err => err);
+};
+
 const router = new Router({
     mode: 'history', //去除路径中的#号
     base: rootPath, //默认为mes模块
